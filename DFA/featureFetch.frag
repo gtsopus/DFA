@@ -7,7 +7,7 @@ layout(pixel_interlock_unordered) in;
 uniform layout(binding=0, rgb32ui) coherent uimage2D fragmentCounterTex;
 uniform layout(binding =1, rgba16f) coherent image2D accTex;
 uniform layout(binding =2, rgba16f) coherent image2D averageTex;
-uniform layout(binding =3, rgba32f) coherent image2DArray bucketTex;
+uniform layout(binding =3, rgba16f) coherent image2DArray bucketTex;
 
 void main(void) {
 	ivec2 coords=ivec2(gl_FragCoord.xy);
