@@ -19,8 +19,6 @@ void main(void) {
 
 	vec4 acc = 	imageLoad(accumulationTex, coords);
 	float product = imageLoad(productTex, coords).r;
-
-	float weight = alpha*pow(1-gl_FragCoord.z,4);
 	
 	product = product * (1-alpha);
 	acc = acc + vec4(color.rgb*alpha*weight,alpha*weight);
