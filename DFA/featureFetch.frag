@@ -64,7 +64,7 @@ void main(void) {
 		fragColor = fragments[1];
 		depth = depth2;
 		fragments[1] = temp;
-		depth1 = depth;
+		depth2 = depth;
 	    imageStore(bucketTex,ivec3(coords,1),temp);
 	    fragsAndDepths.g = floatBitsToUint(depth2)
 	    imageStore(fragmentCounterTex,coords,uvec4(fragsAndDepths,0U));	
