@@ -9,6 +9,8 @@ uniform layout(binding =1, rgba16f) coherent image2D accTex;
 uniform layout(binding =2, rgba16f) coherent image2D averageTex;
 uniform layout(binding =3, rgba16f) coherent image2DArray bucketTex;
 
+void computeColor(); //Generic color function
+
 void main(void) {
 	ivec2 coords=ivec2(gl_FragCoord.xy);
 
